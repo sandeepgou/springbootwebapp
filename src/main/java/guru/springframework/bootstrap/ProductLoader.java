@@ -53,5 +53,14 @@ public class ProductLoader implements ApplicationListener<ContextRefreshedEvent>
         productRepository.save(jacket);
 
         log.info("Saved jacket - id:" + jacket.getId());
+        
+        Product tshirt = new Product();
+        tshirt.setDescription("tshirt");
+        tshirt.setImageUrl("https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C919LA2n93YL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UL1500_.png");
+        tshirt.setProductId("1672");
+        tshirt.setPrice(new BigDecimal("19.95"));
+        productRepository.save(tshirt);
+
+        log.info("Saved tshirt - id:" + tshirt.getId());
     }
 }
